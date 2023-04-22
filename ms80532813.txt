@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "xuchengxi.tk",
+  "Id": "5d1fd49b-329f-4096-81f3-0baeb5657445"
+}
