@@ -5,10 +5,8 @@ backend:
   branch: main
   auth_type: implicit
   app_id: 
-media_folder: "source/gallery/2023"
-public_folder: "/gallery/2023"
 site_url: "https://blog.xuchengxi.tk"
-logo_url: "https://www.imaegoo.com/images/logo.png"
+logo_url: "https://avatars.githubusercontent.com/u/78677516?s=400&u=ecb4efb1b3a8e369aa59914106ede3bcf8cc156d&v=4"
 locale: "zh_Hans"
 common_col_conf: &common_col_conf
   create: true
