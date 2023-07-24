@@ -1,0 +1,163 @@
+# https://decapcms.org/docs/configuration-options/
+backend:
+  name: bitbucket
+  repo: xcx2006/blog_github_action
+  branch: main
+  auth_type: implicit
+  app_id: 
+media_folder: "source/gallery/2023"
+public_folder: "/gallery/2023"
+site_url: "https://blog.xuchengxi.tk"
+logo_url: "https://www.imaegoo.com/images/logo.png"
+locale: "zh_Hans"
+common_col_conf: &common_col_conf
+  create: true
+  slug: "{{fields.filename}}"
+  sortable_fields:
+    - "commit_date"
+    - "title"
+    - "date"
+    - "updated"
+  # https://decapcms.org/docs/widgets/
+  fields:
+    - label: "文件名"
+      name: "filename"
+      widget: "string"
+    - label: "标题"
+      name: "title"
+      widget: "string"
+    - label: "发表日期"
+      name: "date"
+      widget: "datetime"
+      format: "YYYY-MM-DD HH:mm:ss"
+      date_format: "YYYY-MM-DD"
+      time_format: "HH:mm:ss"
+    - label: "更新日期"
+      name: "updated"
+      widget: "datetime"
+      format: "YYYY-MM-DD HH:mm:ss"
+      date_format: "YYYY-MM-DD"
+      time_format: "HH:mm:ss"
+      required: false
+    - label: "封面"
+      name: "cover"
+      widget: "image"
+      required: false
+    - label: "标签"
+      name: "tags"
+      widget: "select"
+      multiple: true
+      required: false
+      options:
+        - "amazon"
+        - "android"
+        - "angularjs"
+        - "azure"
+        - "cdn"
+        - "chartjs"
+        - "chrome"
+        - "csharp"
+        - "css"
+        - "devops"
+        - "diary"
+        - "docker"
+        - "edge"
+        - "git"
+        - "github"
+        - "hexo"
+        - "html"
+        - "icarus"
+        - "java"
+        - "js"
+        - "life"
+        - "material"
+        - "mysql"
+        - "nodejs"
+        - "onedrive"
+        - "oneindex"
+        - "php"
+        - "restapi"
+        - "security"
+        - "serverless"
+        - "shadowdefender"
+        - "tool"
+        - "twikoo"
+        - "ubuntu"
+        - "vagrant"
+        - "vb"
+        - "vite"
+        - "vue"
+        - "webpack"
+        - "windows"
+        - "xlsx"
+        - "小程序"
+    - label: "分类"
+      name: "categories"
+      widget: "select"
+      multiple: true
+      required: false
+      options:
+        - "Diary"
+        - "Tool"
+        - "Tech"
+        - "FrontEnd"
+        - "BackEnd"
+        - "Windows"
+        - "Android"
+        - "Linux"
+        - "Serverless"
+    - label: "正文"
+      name: "body"
+      widget: "markdown"
+    - label: "原创"
+      name: "toc"
+      widget: "boolean"
+      default: true
+    - label: "评论"
+      name: "comments"
+      widget: "boolean"
+      default: true
+collections:
+  - name: "2023"
+    label: "2023"
+    folder: "source/_posts/2023"
+    preview_path: "2023/{{filename}}/"
+    <<: *common_col_conf
+  - name: "2022"
+    label: "2022"
+    folder: "source/_posts/2022"
+    preview_path: "2022/{{filename}}/"
+    <<: *common_col_conf
+  - name: "2021"
+    label: "2021"
+    folder: "source/_posts/2021"
+    preview_path: "2021/{{filename}}/"
+    <<: *common_col_conf
+  - name: "2020"
+    label: "2020"
+    folder: "source/_posts/2020"
+    preview_path: "2020/{{filename}}/"
+    <<: *common_col_conf
+  - name: "2019"
+    label: "2019"
+    folder: "source/_posts/2019"
+    preview_path: "2019/{{filename}}/"
+    <<: *common_col_conf
+  - name: "2018"
+    label: "2018"
+    folder: "source/_posts/2018"
+    preview_path: "2018/{{filename}}/"
+    <<: *common_col_conf
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "friends"
+        label: "友链"
+        file: "source/friends/index.md"
+        preview_path: "friends/"
+        <<: *common_col_conf
+      - name: "about"
+        label: "关于"
+        file: "source/about/index.md"
+        preview_path: "about/"
+        <<: *common_col_conf
