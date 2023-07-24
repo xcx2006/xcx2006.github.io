@@ -1,6 +1,6 @@
 # https://decapcms.org/docs/configuration-options/
 backend:
-  name: bitbucket
+  name: github
   repo: xcx2006/blog_github_action
   branch: main
   auth_type: implicit
